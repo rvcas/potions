@@ -1,24 +1,10 @@
-# Sips
+# Potions
 
-**TODO: Add description**
+Elixir based CLI to query `http://cocktails-api.herokuapp.com/`
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `sips` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:sips, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `sips` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:sips]]
-    end
-    ```
+## Setup
+* `git clone https://github.com/lrosa007/potions.git`
+* `cd potions`
+* `mix escript.build`
+* `./potions ingredients`
 
