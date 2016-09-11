@@ -9,4 +9,4 @@ Elixir based CLI to query `http://cocktails-api.herokuapp.com/`
 * `mix escript.build`
 * `./potions ingredients`
 
-*Note: installing elixir with give you the mix command*
+*Note: installing elixir will give you the mix command*
