@@ -20,7 +20,6 @@ defmodule Potions do
         IO.puts("fetching ingredients.....")
       end
 
-      HTTPoison.start
       case HTTPoison.get("http://cocktails-api.herokuapp.com/ingredients") do
         {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
           body
