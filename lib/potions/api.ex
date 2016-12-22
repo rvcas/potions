@@ -1,6 +1,5 @@
 defmodule Potions.API do
   def get(query) do
-    HTTPoison.start
     case HTTPoison.get("http://cocktails-api.herokuapp.com/#{query}") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         body
