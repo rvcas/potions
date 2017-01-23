@@ -1,14 +1,10 @@
 defmodule Potions.API do
   def get(query) do
     case HTTPoison.get("http://cocktails-api.herokuapp.com/#{query}") do
-      {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
-        body
-        |> Poison.decode!
-        |> IO.inspect
-      {:ok, %HTTPoison.Response{status_code: 404}} ->
-        IO.puts "Not found :("
-      {:error, %HTTPoison.Error{reason: reason}} ->
-        IO.inspect reason
+      { :ok, %HTTPoison.Response{ status_code: 200, body: body } } ->
+        { :ok, Poison.decode!(body) }
+      { :error, %HTTPoison.Error{ reason: reason } } ->
+        { :error, reason }
     end
   end
 end
